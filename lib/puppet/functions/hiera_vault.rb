@@ -159,7 +159,7 @@ Puppet::Functions.create_function(:hiera_vault) do
 
     answer = context.not_found if answer.nil?
     @@shutdown.call
-    return answer.to_json
+    return answer
   end
 
   # Stringify key:values so user sees expected results and nested objects
